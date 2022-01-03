@@ -18,7 +18,7 @@ function procesarPosicion(position) {
 	
 	L.rectangle(bounds, {color: "#ff7800", weight: 1}).addTo(map);
 	map.fitBounds(bounds);
-	const marker = placeTreasure(bounds[0][0], bounds[0][1], map);
+	placeTreasure(bounds[0][0], bounds[0][1], map);
 }
 
 function fallo() {
@@ -48,5 +48,5 @@ function placeTreasure(lat, lng, map) {
 	var new_ltd = lat- (ltd_variation / r_earth) * (180 / pi);
 	var new_lng = lng + (lng_variation / r_earth) * (180 / pi) / Math.cos(new_ltd * pi / 180);
 
-	return L.marker([new_ltd, new_lng]).addTo(map);
+	//return L.marker([new_ltd, new_lng]).addTo(map);
 }

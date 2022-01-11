@@ -58,6 +58,7 @@ function placeTreasure(lat, lng, map) {
 }
 
 function monitorPosition(position) {
+	console.log(`Calculating position`);
 	var ltd=position.coords.latitude;
 	var lng=position.coords.longitude;
 
@@ -120,7 +121,10 @@ function giveInstructions() {
 	} else if (userLng < treasureLng) {
 		cadena += "east";
 	}
+	const date = new Date();
+	cadena += `\n[last upd ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}]`;
 	document.getElementById("instructions").innerText = cadena;
+	console.log(`Instructions -> [${cadena}]`);
 }
 
 

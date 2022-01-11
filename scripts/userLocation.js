@@ -104,7 +104,7 @@ function toRad(value)  {
 }
 
 function giveInstructions() {
-	var cadena = "Head ";
+	var cadena = "Instructions: Head ";
 	const userLat = this.userMarker.getLatLng().lat;
 	const userLng = this.userMarker.getLatLng().lng
 	const treasureLat = this.treasure[0];
@@ -112,12 +112,12 @@ function giveInstructions() {
 
 	if(userLat > treasureLat) {
 		cadena += "north";
-	} else {
+	} else if(userLat < treasureLat){
 		cadena += "south";
 	}
 	if(userLng > treasureLng) {
 		cadena += "west";
-	} else {
+	} else if (userLng < treasureLng) {
 		cadena += "east";
 	}
 	document.getElementById("instructions").innerText = cadena;

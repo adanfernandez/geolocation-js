@@ -112,9 +112,9 @@ function giveInstructions() {
 	const treasureLng = this.treasure[1]
 
 	if(userLat > treasureLat) {
-		cadena += "north";
-	} else if(userLat < treasureLat){
 		cadena += "south";
+	} else if(userLat < treasureLat){
+		cadena += "north";
 	}
 	if(userLng > treasureLng) {
 		cadena += "west";

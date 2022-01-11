@@ -74,6 +74,7 @@ function monitorPosition(position) {
 		giveInstructions();
 	} else {
 		alert("Juego terminado. ¡Has encontrado el tesoro!");
+		location.reload();
 	}
 }
 
